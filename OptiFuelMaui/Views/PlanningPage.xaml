@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OptiFuelMaui.Views.PlaningPage"
+             xmlns:vm="clr-namespace:OptiFuelMaui.ViewModels"
+             Title="">
+    <ContentPage.BindingContext>
+        <vm:PlanningViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Label Text="Planning"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               Margin="20" />
+
+        <CollectionView x:Name="planingCollectionView"
+                        ItemsSource="{Binding Plannings}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" ColumnDefinitions="*,*,*">
+                        <Label Text="{Binding Date, StringFormat='{} {0:MM/dd/yyyy}'}"
+                               Grid.Column="0" 
+                               HorizontalTextAlignment="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PlanningViewModel}}, Path=SelectPlanningCommand}" CommandParameter="{Binding .}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Text="{Binding Center}"
+                               Grid.Column="1" 
+                               HorizontalTextAlignment="Center"/>
+                        <Label Text="{Binding QuantiteALivrer}"
+                               Grid.Column="2" 
+                               HorizontalTextAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.Header>
+                <Grid Padding="10" ColumnDefinitions="*,*,*"
+                      BackgroundColor="LightGray">
+                    <Label Text="Date"
+                           Grid.Column="0"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="Centre"
+                           Grid.Column="1"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="Qte à Livrer"
+                           Grid.Column="2"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+                </Grid>
+            </CollectionView.Header>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

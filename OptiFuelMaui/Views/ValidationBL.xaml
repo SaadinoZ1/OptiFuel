@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:OptiFuelMaui.ViewModels"
+             x:Class="OptiFuelMaui.Views.ValidationBL"
+             Title="ValidationBL">
+    <ContentPage.BindingContext>
+        <vm:ValidationPageViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView>
+    <StackLayout Padding="20"  Spacing="20">
+        
+        <Frame  CornerRadius="20"   HorizontalOptions="StartAndExpand">
+            <!-- Date -->
+            <Label Text="{Binding SelectedPlanning.Date, StringFormat=' {0:MM/dd/yyyy}'}"
+               FontSize="Large"
+               HorizontalOptions="CenterAndExpand" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        </Frame>
+        
+            <Frame  CornerRadius="20"   HorizontalOptions="CenterAndExpand">
+
+            <!-- Quantité prévue à livrer -->
+            <Label Text="{Binding SelectedPlanning.QuantiteALivrer, StringFormat='Qte prévue: {0}'}"
+               FontSize="Medium"
+               HorizontalOptions="CenterAndExpand"  FontAttributes="Bold"/>
+        </Frame>
+        
+        <StackLayout  Orientation="Horizontal"  HorizontalOptions="StartAndExpand" Padding="15" Spacing="10">
+           <!-- Capture BL Button -->
+                <ImageButton  Source="camera.jpg"
+                              Command="{Binding CaptureBLCommand}" BackgroundColor="MediumAquamarine" WidthRequest="60" HeightRequest="50"/>
+                <Label Text=" BL" VerticalOptions="Center" FontAttributes="Bold" />
+
+        </StackLayout>
+
+        <StackLayout  Orientation="Horizontal"  HorizontalOptions="StartAndExpand" Padding="15" Spacing="10">
+          <!-- Capture Certificat Button -->
+                <ImageButton  Source="camera.jpg"
+                Command="{Binding CaptureCertificatCommand}" BackgroundColor="MediumAquamarine" WidthRequest="60" HeightRequest="50"/>
+                <Label Text="Certificat" VerticalOptions="Center" FontAttributes="Bold" />
+        </StackLayout>
+            <Frame BackgroundColor="MediumAquamarine" Padding="10" HeightRequest="50" WidthRequest="200">
+            <!-- Confirmer Button -->
+            <Button Text="Confirmer"
+                    TextColor="Black"
+                    Command="{Binding ConfirmCommand}"  BackgroundColor="MediumAquamarine" CornerRadius="20" FontAttributes="Bold"  HeightRequest="60"/>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
