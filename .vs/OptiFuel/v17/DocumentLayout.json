@@ -1,0 +1,276 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuelmaui\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|solutionrelative:optifuelmaui\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuel\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|solutionrelative:optifuel\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuelmaui\\viewmodels\\validationpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|solutionrelative:optifuelmaui\\viewmodels\\validationpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuel\\controllers\\planningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|solutionrelative:optifuel\\controllers\\planningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Controllers\\BLController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OptiFuel\\Controllers\\BLController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuel\\models\\certificat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|solutionrelative:optifuel\\models\\certificat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuel\\dtos\\planningdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|solutionrelative:optifuel\\dtos\\planningdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuelmaui\\viewmodels\\planningviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|solutionrelative:optifuelmaui\\viewmodels\\planningviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuel\\models\\bondelivraison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|solutionrelative:optifuel\\models\\bondelivraison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Controllers\\CetificatController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OptiFuel\\Controllers\\CetificatController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuelmaui\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|solutionrelative:optifuelmaui\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuelmaui\\views\\validationbl.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|solutionrelative:optifuelmaui\\views\\validationbl.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuelmaui\\views\\planningpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|solutionrelative:optifuelmaui\\views\\planningpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuelmaui\\views\\planningpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AC24C3D-6FE3-4312-8A67-EA865E0EA945}|OptiFuelMaui\\OptiFuelMaui.csproj|solutionrelative:optifuelmaui\\views\\planningpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|c:\\users\\admin\\source\\repos\\optifuel\\optifuel\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{00ED7582-BEB2-4551-9DD0-C529B808CF8B}|OptiFuel\\OptiFuel.csproj|solutionrelative:optifuel\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\.gitignore",
+              "RelativeDocumentMoniker": "OptiFuelMaui\\.gitignore",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\.gitignore",
+              "RelativeToolTip": "OptiFuelMaui\\.gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-23T14:27:08.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\.gitignore",
+              "RelativeDocumentMoniker": "OptiFuel\\.gitignore",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\.gitignore",
+              "RelativeToolTip": "OptiFuel\\.gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-23T14:25:46.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlanningDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Dtos\\PlanningDto.cs",
+              "RelativeDocumentMoniker": "OptiFuel\\Dtos\\PlanningDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Dtos\\PlanningDto.cs",
+              "RelativeToolTip": "OptiFuel\\Dtos\\PlanningDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T13:54:01.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlanningController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Controllers\\PlanningController.cs",
+              "RelativeDocumentMoniker": "OptiFuel\\Controllers\\PlanningController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Controllers\\PlanningController.cs",
+              "RelativeToolTip": "OptiFuel\\Controllers\\PlanningController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAADQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:55:20.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CetificatController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Controllers\\CetificatController.cs",
+              "RelativeDocumentMoniker": "OptiFuel\\Controllers\\CetificatController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Controllers\\CetificatController.cs",
+              "RelativeToolTip": "OptiFuel\\Controllers\\CetificatController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T08:45:10.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Certificat.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Models\\Certificat.cs",
+              "RelativeDocumentMoniker": "OptiFuel\\Models\\Certificat.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Models\\Certificat.cs",
+              "RelativeToolTip": "OptiFuel\\Models\\Certificat.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T10:46:11.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BLController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Controllers\\BLController.cs",
+              "RelativeDocumentMoniker": "OptiFuel\\Controllers\\BLController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Controllers\\BLController.cs",
+              "RelativeToolTip": "OptiFuel\\Controllers\\BLController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAABYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T08:44:45.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlanningViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\ViewModels\\PlanningViewModel.cs",
+              "RelativeDocumentMoniker": "OptiFuelMaui\\ViewModels\\PlanningViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\ViewModels\\PlanningViewModel.cs",
+              "RelativeToolTip": "OptiFuelMaui\\ViewModels\\PlanningViewModel.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAADkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T11:38:55.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BonDeLivraison.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Models\\BonDeLivraison.cs",
+              "RelativeDocumentMoniker": "OptiFuel\\Models\\BonDeLivraison.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\Models\\BonDeLivraison.cs",
+              "RelativeToolTip": "OptiFuel\\Models\\BonDeLivraison.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T10:35:20.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ValidationPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\ViewModels\\ValidationPageViewModel.cs",
+              "RelativeDocumentMoniker": "OptiFuelMaui\\ViewModels\\ValidationPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\ViewModels\\ValidationPageViewModel.cs",
+              "RelativeToolTip": "OptiFuelMaui\\ViewModels\\ValidationPageViewModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T12:02:49.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "OptiFuelMaui\\Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\Services\\ApiService.cs",
+              "RelativeToolTip": "OptiFuelMaui\\Services\\ApiService.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAQwFYAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T09:13:52.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ValidationBL.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\Views\\ValidationBL.xaml",
+              "RelativeDocumentMoniker": "OptiFuelMaui\\Views\\ValidationBL.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\Views\\ValidationBL.xaml",
+              "RelativeToolTip": "OptiFuelMaui\\Views\\ValidationBL.xaml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-19T12:06:24.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PlanningPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\Views\\PlanningPage.xaml",
+              "RelativeDocumentMoniker": "OptiFuelMaui\\Views\\PlanningPage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\Views\\PlanningPage.xaml",
+              "RelativeToolTip": "OptiFuelMaui\\Views\\PlanningPage.xaml",
+              "ViewState": "AQIAABIAAAAAAAAAAIBJwAMAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-19T09:57:20.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PlanningPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\Views\\PlanningPage.xaml.cs",
+              "RelativeDocumentMoniker": "OptiFuelMaui\\Views\\PlanningPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuelMaui\\Views\\PlanningPage.xaml.cs",
+              "RelativeToolTip": "OptiFuelMaui\\Views\\PlanningPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T10:12:59.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\appsettings.json",
+              "RelativeDocumentMoniker": "OptiFuel\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\OptiFuel\\OptiFuel\\appsettings.json",
+              "RelativeToolTip": "OptiFuel\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-18T15:25:02.807Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
