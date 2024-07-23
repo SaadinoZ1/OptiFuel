@@ -1,2 +1,2 @@
-AdbTarget=-s SBXDU19305006468
+AdbTarget=-s emulator-5554
 AdbOptions=
