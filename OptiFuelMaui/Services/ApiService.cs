@@ -13,7 +13,7 @@ namespace OptiFuelMaui.Services
         private readonly RestClient _client;
         public ApiService()
         {
-            _client = new RestClient("http://192.168.4.234:5232/api"); 
+            _client = new RestClient("http://192.168.4.213:5232/api"); 
         }
 
         private RestRequest CreateRequest(string resource, Method method, object body = null)
