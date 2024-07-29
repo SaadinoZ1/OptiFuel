@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Mapster;
+using MapsterMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OptiFuel.Data;
+using OptiFuel.Dtos;
 using OptiFuel.Models;
 
 namespace OptiFuel.Controllers
@@ -21,13 +24,13 @@ namespace OptiFuel.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Planning>>> GetPlanings()
         {
-            return await _appDbContext.Planings.ToListAsync();
+            return await _appDbContext.Plannings.ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Planning>> GetPlaning(int id)
+        public async Task<ActionResult<Planning>> GetPlanning(int id)
         {
-            var planning = await _appDbContext.Planings.FindAsync(id);
+            var planning = await _appDbContext.Plannings.FindAsync(id);
 
             if (planning == null)
             {
@@ -38,63 +41,13 @@ namespace OptiFuel.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Planning>> PostPlaning([FromBody]Planning planning)
+        public async Task<ActionResult<Planning>> PostPlanning([FromBody]PlanningDto planningDto)
         {
-            _appDbContext.Planings.Add(planning);
+            var planning = planningDto.Adapt<Planning>(); 
+            _appDbContext.Plannings.Add(planning);
             await _appDbContext.SaveChangesAsync();
 
             return CreatedAtAction("GetPlanning", new { id = planning.Id }, planning);
-        }
-
-        [HttpPost("{id}/uploadBL")]
-        public async Task<IActionResult> UploadBL(int id, IFormFile file)
-        {
-            var planning = await _appDbContext.Planings.FindAsync(id);
-            if (planning == null)
-            {
-                return NotFound();
-            }
-            if (planning.BonDeLivraison!=null)
-            {
-                return BadRequest(" Bon de Livraison already exists fr this planning.");
-            }
-
-            using (var memoryStream = new MemoryStream())
-            {
-                await file.CopyToAsync(memoryStream);
-                planning.BonDeLivraison = new BonDeLivraison
-                {
-                    BLFile = memoryStream.ToArray(),
-                    DateValidation = DateTime.Now,
-                    PlanningId = id
-                };
-            }
-            await _appDbContext.SaveChangesAsync();
-            return NoContent();
-        }
-
-
-        [HttpPost("{id}/uploadCertificat")]
-        public async Task<IActionResult> UploadCertificat(int id, IFormFile file)
-        {
-            var planning = await _appDbContext.Planings.FindAsync(id);
-            if (planning == null)
-            {
-                return NotFound();
-            }
-
-            using (var memoryStream = new MemoryStream())
-            {
-                await file.CopyToAsync(memoryStream);
-                planning.Certificat = new Certificat
-                {
-                    CertificatFile = memoryStream.ToArray(),
-                    DateUpload = DateTime.Now
-                };
-            }
-
-            await _appDbContext.SaveChangesAsync();
-            return NoContent();
         }
 
 

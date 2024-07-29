@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OptiFuel.Data;
 
@@ -11,9 +12,11 @@ using OptiFuel.Data;
 namespace OptiFuel.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240725152200_V4")]
+    partial class V4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,19 +50,11 @@ namespace OptiFuel.Migrations
                     b.ToTable("centres");
                 });
 
-            modelBuilder.Entity("OptiFuel.Models.Commission", b =>
+            modelBuilder.Entity("OptiFuel.Models.Comission", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CodeG")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CodeS")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("ContactId")
                         .HasColumnType("uniqueidentifier");
@@ -75,11 +70,7 @@ namespace OptiFuel.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ContactId");
-
-                    b.HasIndex("ValidationBLId");
-
-                    b.ToTable("Commissions");
+                    b.ToTable("Comissions");
                 });
 
             modelBuilder.Entity("OptiFuel.Models.Contact", b =>
@@ -120,18 +111,17 @@ namespace OptiFuel.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Cuve")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Cuve")
+                        .HasColumnType("int");
 
-                    b.Property<double>("DeliveryVolume")
-                        .HasColumnType("float");
+                    b.Property<int>("DeliveryVolume")
+                        .HasColumnType("int");
 
-                    b.Property<double>("LevelEnd")
-                        .HasColumnType("float");
+                    b.Property<int>("LevelEnd")
+                        .HasColumnType("int");
 
-                    b.Property<double>("LevelStart")
-                        .HasColumnType("float");
+                    b.Property<int>("LevelStart")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("ValidationBLId")
                         .HasColumnType("uniqueidentifier");
@@ -144,16 +134,16 @@ namespace OptiFuel.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ValidationBLId");
-
                     b.ToTable("Dechargements");
                 });
 
             modelBuilder.Entity("OptiFuel.Models.Planning", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Center")
                         .HasColumnType("nvarchar(max)");
@@ -172,7 +162,7 @@ namespace OptiFuel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Plannings");
+                    b.ToTable("Planings");
                 });
 
             modelBuilder.Entity("OptiFuel.Models.ValidationBL", b =>
@@ -192,8 +182,8 @@ namespace OptiFuel.Migrations
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("PlanningId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("PlanningId")
+                        .HasColumnType("int");
 
                     b.Property<int>("QuantitésBL")
                         .HasColumnType("int");
@@ -215,40 +205,10 @@ namespace OptiFuel.Migrations
                     b.ToTable("validationBLs");
                 });
 
-            modelBuilder.Entity("OptiFuel.Models.Commission", b =>
-                {
-                    b.HasOne("OptiFuel.Models.Contact", "Contact")
-                        .WithMany()
-                        .HasForeignKey("ContactId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("OptiFuel.Models.ValidationBL", "ValidationBL")
-                        .WithMany("Commissions")
-                        .HasForeignKey("ValidationBLId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Contact");
-
-                    b.Navigation("ValidationBL");
-                });
-
-            modelBuilder.Entity("OptiFuel.Models.Dechargement", b =>
-                {
-                    b.HasOne("OptiFuel.Models.ValidationBL", "ValidationBL")
-                        .WithMany("Dechargements")
-                        .HasForeignKey("ValidationBLId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ValidationBL");
-                });
-
             modelBuilder.Entity("OptiFuel.Models.ValidationBL", b =>
                 {
                     b.HasOne("OptiFuel.Models.Planning", "Planning")
-                        .WithOne("ValidationBL")
+                        .WithOne("ValidationBLs")
                         .HasForeignKey("OptiFuel.Models.ValidationBL", "PlanningId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -258,14 +218,7 @@ namespace OptiFuel.Migrations
 
             modelBuilder.Entity("OptiFuel.Models.Planning", b =>
                 {
-                    b.Navigation("ValidationBL");
-                });
-
-            modelBuilder.Entity("OptiFuel.Models.ValidationBL", b =>
-                {
-                    b.Navigation("Commissions");
-
-                    b.Navigation("Dechargements");
+                    b.Navigation("ValidationBLs");
                 });
 #pragma warning restore 612, 618
         }

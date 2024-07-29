@@ -18,27 +18,6 @@ namespace OptiFuel.Controllers
         }
 
 
-        [HttpPost("{planningId}/uploadCertificat")]
-        public async Task<IActionResult> UploadCertificat(int planningId, IFormFile file)
-        {
-            if (file == null || file.Length == 0)
-                return BadRequest("Upload a valid file");
-
-            using var memoryStream = new MemoryStream();
-            await file.CopyToAsync(memoryStream);
-            var certificat = new Certificat
-            {
-                PlanningId = planningId,
-                CertificatFile = memoryStream.ToArray()
-            };
-
-            _appDbContext.certificats.Add(certificat);
-            await _appDbContext.SaveChangesAsync();
-
-            return Ok(new { certificat.Id });
-        }
-
-
 
     }
 }

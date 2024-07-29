@@ -8,6 +8,8 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuel\bin\Debug\net8.0\OptiFuel.pdb
 C:\Users\Admin\source\repos\OptiFuel\OptiFuel\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuel\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuel\bin\Debug\net8.0\Humanizer.dll
+C:\Users\Admin\source\repos\OptiFuel\OptiFuel\bin\Debug\net8.0\Mapster.dll
+C:\Users\Admin\source\repos\OptiFuel\OptiFuel\bin\Debug\net8.0\Mapster.Core.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuel\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuel\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuel\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
