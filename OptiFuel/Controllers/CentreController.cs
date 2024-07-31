@@ -1,4 +1,4 @@
-﻿   using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OptiFuel.Data;
@@ -8,54 +8,54 @@ namespace OptiFuel.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ContactController : ControllerBase
+    public class CentreController : ControllerBase
     {
         private readonly AppDbContext _appDbContext;
-        public ContactController(AppDbContext appDbContext)
+        public CentreController(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Contact>>> GetContacts()
+        public async Task<ActionResult<IEnumerable<Centre>>> GetContacts()
         {
-            return await _appDbContext.contacts.ToListAsync();
+            return await _appDbContext.centres.ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Contact>> GetContact(Guid id)
+        public async Task<ActionResult<Centre>> GetCentre(Guid id)
         {
-            var contact = await _appDbContext.contacts.FindAsync(id);
+            var centre = await _appDbContext.centres.FindAsync(id);
 
-            if (contact == null)
+            if (centre == null)
             {
                 return NotFound();
             }
 
-            return contact;
+            return centre;
         }
 
         [HttpPost]
-        public async Task<ActionResult<Contact>> PostContact(Contact contact)
+        public async Task<ActionResult<Centre>> PostCentre(Centre centre)
         {
-            contact.Id = Guid.NewGuid();
-            contact.e_created_on = DateTime.UtcNow;
-            _appDbContext.contacts.Add(contact);
+            centre.Id = Guid.NewGuid();
+            centre.e_created_on = DateTime.UtcNow;
+            _appDbContext.centres.Add(centre);
             await _appDbContext.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetContact), new { id = contact.Id }, contact);
+            return CreatedAtAction(nameof(GetCentre), new { id = centre.Id }, centre);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutContact(Guid id, Contact contact)
+        public async Task<IActionResult> PutCentre(Guid id, Centre centre)
         {
-            if (id != contact.Id)
+            if (id != centre.Id)
             {
                 return BadRequest();
             }
 
-            contact.e_updated_on = DateTime.UtcNow;
-            _appDbContext.Entry(contact).State = EntityState.Modified;
+            centre.e_updated_on = DateTime.UtcNow;
+            _appDbContext.Entry(centre).State = EntityState.Modified;
 
             try
             {
@@ -77,15 +77,15 @@ namespace OptiFuel.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteContact(Guid id)
+        public async Task<IActionResult> DeleteCentre(Guid id)
         {
-            var contact = await _appDbContext.contacts.FindAsync(id);
-            if (contact == null)
+            var centre = await _appDbContext.centres.FindAsync(id);
+            if (centre == null)
             {
                 return NotFound();
             }
 
-            _appDbContext.contacts.Remove(contact);
+            _appDbContext.centres.Remove(centre);
             await _appDbContext.SaveChangesAsync();
 
             return NoContent();
@@ -93,10 +93,8 @@ namespace OptiFuel.Controllers
 
         private bool ContactExists(Guid id)
         {
-            return _appDbContext.contacts.Any(e => e.Id == id);
+            return _appDbContext.centres.Any(e => e.Id == id);
         }
     }
-
-
 }
 
