@@ -54,6 +54,41 @@ namespace OptiFuel.Controllers
             return CreatedAtAction("GetPlanning", new { id = planning.Id }, planning);
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutPlanning(Guid id, [FromBody] PlanningDto planningDto)
+        {
+            var planning = await _appDbContext.Plannings.FindAsync(id);
+
+            if (planning == null)
+            {
+                return NotFound();
+            }
+
+            planning.Date = planningDto.Date;
+            planning.Center = planningDto.Center;
+            planning.QuantiteALivrer = planningDto.QuantiteALivrer;
+
+            _appDbContext.Entry(planning).State = EntityState.Modified;
+            await _appDbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePlanning(Guid id)
+        {
+            var planning = await _appDbContext.Plannings.FindAsync(id);
+
+            if (planning == null)
+            {
+                return NotFound();
+            }
+
+            _appDbContext.Plannings.Remove(planning);
+            await _appDbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
 
 
     }
