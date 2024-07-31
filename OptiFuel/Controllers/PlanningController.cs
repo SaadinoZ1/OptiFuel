@@ -1,5 +1,6 @@
 ﻿using Mapster;
 using MapsterMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,12 +23,13 @@ namespace OptiFuel.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Planning>>> GetPlanings()
+        public async Task<ActionResult<IEnumerable<Planning>>> GetPlannings()
         {
             return await _appDbContext.Plannings.ToListAsync();
         }
 
         [HttpGet("{id}")]
+
         public async Task<ActionResult<Planning>> GetPlanning(int id)
         {
             var planning = await _appDbContext.Plannings.FindAsync(id);
@@ -41,6 +43,8 @@ namespace OptiFuel.Controllers
         }
 
         [HttpPost]
+
+
         public async Task<ActionResult<Planning>> PostPlanning([FromBody]PlanningDto planningDto)
         {
             var planning = planningDto.Adapt<Planning>(); 

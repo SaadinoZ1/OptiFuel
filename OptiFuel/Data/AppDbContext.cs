@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using OptiFuel.Models;
 
 namespace OptiFuel.Data
@@ -18,6 +20,7 @@ namespace OptiFuel.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             // Configuration des relations et des clés étrangères
             modelBuilder.Entity<Commission>()
                 .HasOne(c => c.ValidationBL)

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OptiFuel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06f25fa79a2a29b4ebaf58b99f87254ac16f01ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce7c3f69e98eecec7497be86182189d0f77527c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("OptiFuel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OptiFuel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
