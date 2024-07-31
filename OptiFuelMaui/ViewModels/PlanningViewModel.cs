@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using ValidationBL = OptiFuelMaui.Models.ValidationBL;
 
 namespace OptiFuelMaui.ViewModels
 {
