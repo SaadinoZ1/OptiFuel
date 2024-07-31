@@ -9,7 +9,10 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate views:PlaningPage}"
+        ContentTemplate="{DataTemplate views:PlanningPage}"
         Route="MainPage" />
+    <ShellContent
+    Title="Add Planning"
+    ContentTemplate="{DataTemplate views:AddPlanning}"/>
 
 </Shell>

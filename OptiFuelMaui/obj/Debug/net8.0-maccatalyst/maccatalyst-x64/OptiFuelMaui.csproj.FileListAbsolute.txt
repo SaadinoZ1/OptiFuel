@@ -262,7 +262,6 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\m
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
-C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\camera.jpg
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -275,6 +274,8 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\m
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\calendar.png
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\camera.jpg
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png

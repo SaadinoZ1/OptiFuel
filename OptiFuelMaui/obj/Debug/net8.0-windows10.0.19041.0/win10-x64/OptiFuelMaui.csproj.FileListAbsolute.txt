@@ -101,6 +101,7 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-windows10.0.1
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.stamp
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\calendar.scale-100.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\camera.scale-100.jpg
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png

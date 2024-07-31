@@ -21,12 +21,15 @@ namespace OptiFuelMaui.ViewModels
         private readonly ApiService _apiService;
         public ObservableCollection<Planning> Plannings { get; set; }
         public ICommand SelectPlanningCommand { get; }
+        public ICommand NavigateToAddPlanningCommand { get;}
+
 
         public PlanningViewModel()
         {
             _apiService = new ApiService();
             Plannings = new ObservableCollection<Planning>();
             SelectPlanningCommand = new Command<Planning>(OnPlanningSelected);
+            NavigateToAddPlanningCommand = new Command(OnNavigateToAddPlanning);
             LoadPlannings();
         }
 
@@ -57,6 +60,11 @@ namespace OptiFuelMaui.ViewModels
 
             await Shell.Current.GoToAsync($"{nameof(ValidationBL)}?PlanningId={planning.Id}");
         }
+        private async void OnNavigateToAddPlanning()
+        {
+            await Shell.Current.GoToAsync(nameof(AddPlanning));
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

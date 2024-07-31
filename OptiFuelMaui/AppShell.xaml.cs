@@ -6,8 +6,10 @@ namespace OptiFuelMaui.Views
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(PlaningPage), typeof(PlaningPage));
+            Routing.RegisterRoute(nameof(PlanningPage), typeof(PlanningPage));
             Routing.RegisterRoute(nameof(ValidationBL), typeof(ValidationBL));
+            Routing.RegisterRoute(nameof(AddPlanning), typeof(AddPlanning));
+
 
 
         }

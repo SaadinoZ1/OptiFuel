@@ -43,44 +43,9 @@ namespace OptiFuelMaui.ViewModels
         public ValidationPageViewModel()
         {
             _apiService = new ApiService();
-            LoadDataCommand = new Command(async () => await LoadData());
-            CaptureBLCommand = new Command(async () => await CaptureBL());
-            CaptureCertificatCommand = new Command(async () => await CaptureCertificat());
-            ConfirmCommand = new Command(async () => await OnConfirm());
         }
 
-        private async Task LoadData()
-        {
-            IsBusy = true;
-            SelectedPlanning = await _apiService.GetPlanningAsync(PlanningId);
-            IsBusy = false;
-        }
-
-        private async Task CaptureBL()
-        {
-            var photo = await MediaPicker.CapturePhotoAsync();
-            if (photo != null)
-            {
-                var stream = await photo.OpenReadAsync();
-                await _apiService.UploadFileAsync(PlanningId, stream, "bl.jpg", "uploadBL");
-            }
-        }
-
-        private async Task CaptureCertificat()
-        {
-            var photo = await MediaPicker.CapturePhotoAsync();
-            if (photo != null)
-            {
-                var stream = await photo.OpenReadAsync();
-
-                await _apiService.UploadFileAsync(PlanningId, stream, "certificat.jpg", "uploadCertificat");
-            }
-        }
-
-        private async Task OnConfirm()
-        {
-            await Shell.Current.GoToAsync("..");
-        }
+        
 
     }
 

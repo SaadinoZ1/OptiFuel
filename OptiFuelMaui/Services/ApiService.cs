@@ -48,7 +48,7 @@ namespace OptiFuelMaui.Services
             return new List<Planning>();
         }
 
-        public async Task<Planning> GetPlanningAsync(int id)
+        public async Task<Planning> GetPlanningAsync(Guid id)
         {
             var request = CreateRequest($"planning/{id}", Method.Get);
             var response = await _client.ExecuteAsync<Planning>(request);
@@ -66,43 +66,18 @@ namespace OptiFuelMaui.Services
             return response.IsSuccessful;
         }
 
-        public async Task<bool> EditPlanningAsync(int id, Planning planning)
+        public async Task<bool> EditPlanningAsync(Guid id, Planning planning)
         {
             var request = CreateRequest($"planning/{id}", Method.Put, planning);
             var response = await _client.ExecuteAsync(request);
             return response.IsSuccessful;
         }
 
-        public async Task<bool> DeletePlanningAsync(int planningId)
+        public async Task<bool> DeletePlanningAsync(Guid planningId)
         {
             var request = CreateRequest($"planning/{planningId}", Method.Delete);
             var response = await _client.ExecuteAsync(request);
             return response.IsSuccessful;
-        }
-
-        public async Task<bool> UploadFileAsync(int planningId, Stream fileStream, string fileName, string endpoint)
-        {
-            try
-            {
-                var request = new RestRequest($"/planning/{planningId}/{endpoint}", Method.Post);
-                request.AddFile("file", ReadFully(fileStream), fileName, "application/o");
-                var response = await _client.ExecuteAsync(request);
-                return response.IsSuccessful;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception in UploadFileAsync: {ex.Message}");
-                return false;
-            }
-        }
-
-        private byte[] ReadFully(Stream input)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                input.CopyTo(ms);
-                return ms.ToArray();
-            }
         }
 
 

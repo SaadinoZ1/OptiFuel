@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:OptiFuelMaui.ViewModels"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="OptiFuelMaui.Views.AddPlanning"
+             Title="">
+    <ContentPage.BindingContext>
+        <vm:AddPlanningViewModel/>
+    </ContentPage.BindingContext>
+    <Frame BackgroundColor="White" Padding="20" CornerRadius="20" HeightRequest="450" WidthRequest="400" Margin="0,-200,0,0">
+    <StackLayout Padding="20" Spacing="10">
+       
+            <Label Text="Center"  FontAttributes="Bold"/>
+            <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
+            <Entry Text="{Binding NewPlanning.Center}" Placeholder="Enter center" />
+            </Frame>
+            <Label Text="Quantiter a Livrer" FontAttributes="Bold" />
+            <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
+                <Entry Text="{Binding NewPlanning.QuantiteALivrer}" Placeholder="Enter quantity" Keyboard="Numeric" />
+            </Frame>
+            <Label Text="Date" FontAttributes="Bold" />
+            <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
+            <DatePicker Date="{Binding NewPlanning.Date}" Format="dd/MM/yyyy" TextColor="Blue" BackgroundColor="LightGray" MinimumDate="{x:Static sys:DateTime.Now}" />
+            </Frame>
+            <Button Text="Add Planning" Command="{Binding AddPlanningCommand}" CornerRadius="20"  HeightRequest="50" WidthRequest="200"/>
+    </StackLayout>
+    </Frame>
+</ContentPage>

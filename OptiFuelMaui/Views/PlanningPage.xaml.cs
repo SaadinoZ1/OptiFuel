@@ -5,11 +5,11 @@ using OptiFuelMaui.ViewModels;
 
 namespace OptiFuelMaui.Views;
 
-public partial class PlaningPage : ContentPage
+public partial class PlanningPage : ContentPage
 {
     private readonly PlanningViewModel _viewModel;
     public ObservableCollection<Planning> Plannings { get; set; }
-    public PlaningPage()
+    public PlanningPage()
     {
         InitializeComponent();
         _viewModel = new PlanningViewModel();
