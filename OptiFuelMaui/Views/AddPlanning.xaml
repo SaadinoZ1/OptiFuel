@@ -23,7 +23,7 @@
             <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
             <DatePicker Date="{Binding NewPlanning.Date}" Format="dd/MM/yyyy" TextColor="Blue" BackgroundColor="LightGray" MinimumDate="{x:Static sys:DateTime.Now}" />
             </Frame>
-            <Button Text="Add Planning" Command="{Binding AddPlanningCommand}" CornerRadius="20"  HeightRequest="50" WidthRequest="200"/>
+            <Button Text="Add Planning" Command="{Binding AddPlanningCommand}" CornerRadius="20"  HeightRequest="50" WidthRequest="200" BackgroundColor="MediumAquamarine"/>
     </StackLayout>
     </Frame>
 </ContentPage>
