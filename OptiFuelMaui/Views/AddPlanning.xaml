@@ -8,9 +8,8 @@
     <ContentPage.BindingContext>
         <vm:AddPlanningViewModel/>
     </ContentPage.BindingContext>
-    <Frame BackgroundColor="White" Padding="20" CornerRadius="20" HeightRequest="450" WidthRequest="400" Margin="0,-200,0,0">
+    <Frame BackgroundColor="White" Padding="20" CornerRadius="20" HeightRequest="450" WidthRequest="400" Margin="0,-50,0,0">
         <StackLayout Padding="20" Spacing="10">
-
             <Label Text="Center"  FontAttributes="Bold"/>
             <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
                 <Picker ItemsSource="{Binding CentreNames}"  SelectedItem="{Binding SelectedCentreName}" Title="Select a Center"/>

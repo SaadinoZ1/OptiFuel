@@ -3,14 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:OptiFuelMaui.ViewModels"
              x:Class="OptiFuelMaui.Views.ValidationBL"
-             Title="ValidationBL">
+             Title="">
     <ContentPage.BindingContext>
         <vm:ValidationPageViewModel />
     </ContentPage.BindingContext>
     <ScrollView>
-    <StackLayout Padding="20"  Spacing="20">
-        
-        <Frame  CornerRadius="20"   HorizontalOptions="StartAndExpand">
+        <StackLayout Padding="20"  Spacing="20">
+            <Label Text="Validation BL"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            Margin="20"  FontAttributes="Bold"/>
+
+                <Frame  CornerRadius="20"   HorizontalOptions="StartAndExpand">
             <!-- Date -->
             <Label Text="{Binding SelectedPlanning.Date, StringFormat=' {0:MM/dd/yyyy}'}"
                FontSize="Large"

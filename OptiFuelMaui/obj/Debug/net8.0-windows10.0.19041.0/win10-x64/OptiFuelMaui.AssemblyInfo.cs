@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OptiFuelMaui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b2aa1c9db0b8138478aa3d1e2e3cc79ef93ebc54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+630025fc182e3369ccc425d1bc30b3335d6fc3c8")]
 [assembly: System.Reflection.AssemblyProductAttribute("OptiFuelMaui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OptiFuelMaui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

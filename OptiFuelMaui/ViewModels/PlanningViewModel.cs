@@ -58,7 +58,7 @@ namespace OptiFuelMaui.ViewModels
             if (planning == null)
                 return;
 
-            await Shell.Current.GoToAsync($"{nameof(ValidationBL)}?PlanningId={planning.Id}");
+            await Shell.Current.GoToAsync($"///ValidationBL?PlanningId={planning.Id}");
         }
         private async void OnNavigateToAddPlanning()
         {

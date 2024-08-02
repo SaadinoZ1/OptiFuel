@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OptiFuelMaui.Views.PlanningPage"
-             xmlns:vm="clr-namespace:OptiFuelMaui.ViewModels"
+             xmlns:vm="clr-namespace:OptiFuelMaui.ViewModels" 
              Title="">
     <ContentPage.BindingContext>
         <vm:PlanningViewModel />
@@ -11,7 +11,7 @@
         <Label Text="Planning"
                FontSize="Large"
                HorizontalOptions="Center"
-               Margin="20" />
+               Margin="20" FontAttributes="Bold" />
 
         <CollectionView x:Name="planingCollectionView"
                         ItemsSource="{Binding Plannings}">
@@ -52,11 +52,5 @@
                 </Grid>
             </CollectionView.Header>
         </CollectionView>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="15" Spacing="10">
-            <ImageButton  Source="calendar.png"
-         Command="{Binding NavigateToAddPlanningCommand}"
-         WidthRequest="60" HeightRequest="50"/>
-            <Label Text="Add Planning" VerticalOptions="Center" FontAttributes="Bold"/>
-        </StackLayout>
     </StackLayout>
 </ContentPage>

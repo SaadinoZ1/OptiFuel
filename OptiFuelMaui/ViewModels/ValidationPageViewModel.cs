@@ -11,23 +11,30 @@ using System.Windows.Input;
 
 namespace OptiFuelMaui.ViewModels
 {
-    [QueryProperty(nameof(PlanningId),"PlanningId")]
-    public  class ValidationPageViewModel: BaseViewModel
+    [QueryProperty(nameof(PlanningId), "PlanningId")]
+    public class ValidationPageViewModel : BaseViewModel
     {
         private readonly ApiService _apiService;
-        private int _planningId;
+        private Guid _planningId;
         private Planning _selectedPlanning;
 
 
-        public int PlanningId
+        public string PlanningId
         {
-            get => _planningId;
             set
             {
-                _planningId = value;
+                if (Guid.TryParse(value, out var guid))
+                {
+                    Console.WriteLine($"Received PlanningId: {guid}");
+                    _planningId = guid;
+            
                 LoadDataCommand.Execute(null);
             }
-        }
+            else 
+            {
+                Console.WriteLine("Invalid Guid format.");
+            }
+        } }
 
         public Planning SelectedPlanning
         {
@@ -43,9 +50,41 @@ namespace OptiFuelMaui.ViewModels
         public ValidationPageViewModel()
         {
             _apiService = new ApiService();
+            LoadDataCommand = new Command(async () => await LoadDataAsync());
+            CaptureBLCommand = new Command(async () => await CaptureBLAsync());
+            CaptureCertificatCommand = new Command(async () => await CaptureCertificatAsync());
+            ConfirmCommand = new Command(async () => await ConfirmAsync());
         }
 
-        
+
+        private async Task LoadDataAsync()
+        {
+            try
+            {
+                SelectedPlanning = await _apiService.GetPlanningAsync(_planningId);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading planning: {ex.Message}");
+            }
+        }
+
+        private async Task CaptureBLAsync()
+        {
+            // Logic to capture BL
+        }
+
+        private async Task CaptureCertificatAsync()
+        {
+            // Logic to capture Certificat
+        }
+
+        private async Task ConfirmAsync()
+        {
+            // Logic to confirm
+        }
+
+
 
     }
 

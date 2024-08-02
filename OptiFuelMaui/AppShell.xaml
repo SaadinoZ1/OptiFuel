@@ -9,7 +9,7 @@
 
 
     <TabBar>
-        <Tab Title="Home" Icon="home3.png">
+        <Tab Title="Home" Icon="hm.jpg">
             <ShellContent
     Title="Home"
     ContentTemplate="{DataTemplate views:PlanningPage}"
