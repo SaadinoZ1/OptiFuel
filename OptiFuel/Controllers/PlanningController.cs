@@ -30,7 +30,7 @@ namespace OptiFuel.Controllers
 
         [HttpGet("{id}")]
 
-        public async Task<ActionResult<Planning>> GetPlanning(int id)
+        public async Task<ActionResult<Planning>> GetPlanning(Guid id)
         {
             var planning = await _appDbContext.Plannings.FindAsync(id);
 
