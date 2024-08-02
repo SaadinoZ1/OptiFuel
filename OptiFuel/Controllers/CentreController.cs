@@ -17,13 +17,13 @@ namespace OptiFuel.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Centre>>> GetContacts()
+        public async Task<ActionResult<IEnumerable<Centre>>> GetCenter()
         {
             return await _appDbContext.centres.ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Centre>> GetCentre(Guid id)
+        public async Task<ActionResult<Centre>> GetCenter(Guid id)
         {
             var centre = await _appDbContext.centres.FindAsync(id);
 
@@ -36,18 +36,18 @@ namespace OptiFuel.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Centre>> PostCentre(Centre centre)
+        public async Task<ActionResult<Centre>> PostCenter(Centre centre)
         {
             centre.Id = Guid.NewGuid();
             centre.e_created_on = DateTime.UtcNow;
             _appDbContext.centres.Add(centre);
             await _appDbContext.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetCentre), new { id = centre.Id }, centre);
+            return CreatedAtAction(nameof(GetCenter), new { id = centre.Id }, centre);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCentre(Guid id, Centre centre)
+        public async Task<IActionResult> PutCenter(Guid id, Centre centre)
         {
             if (id != centre.Id)
             {
@@ -77,7 +77,7 @@ namespace OptiFuel.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCentre(Guid id)
+        public async Task<IActionResult> DeleteCenter(Guid id)
         {
             var centre = await _appDbContext.centres.FindAsync(id);
             if (centre == null)

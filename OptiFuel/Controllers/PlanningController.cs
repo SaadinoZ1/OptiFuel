@@ -43,36 +43,41 @@ namespace OptiFuel.Controllers
         }
 
         [HttpPost]
-
-
-        public async Task<ActionResult<Planning>> PostPlanning([FromBody]PlanningDto planningDto)
+        public async Task<ActionResult<Planning>> PostPlanning([FromBody] PlanningDto planningDto)
         {
-            var planning = planningDto.Adapt<Planning>(); 
+            if (planningDto == null)
+            {
+                return BadRequest("Invalid date.");
+            }
+            var planning = planningDto.Adapt<Planning>();
+            planning.Id = Guid.NewGuid();
+            Console.WriteLine($"Center: {planning.Centre}, Date: {planning.Date}, QuantiteALivrer: {planning.QuantiteALivrer}");
+
             _appDbContext.Plannings.Add(planning);
             await _appDbContext.SaveChangesAsync();
 
             return CreatedAtAction("GetPlanning", new { id = planning.Id }, planning);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutPlanning(Guid id, [FromBody] PlanningDto planningDto)
-        {
-            var planning = await _appDbContext.Plannings.FindAsync(id);
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutPlanning(Guid id, [FromBody] PlanningDto planningDto)
+        //{
+        //    var planning = await _appDbContext.Plannings.FindAsync(id);
 
-            if (planning == null)
-            {
-                return NotFound();
-            }
+        //    if (planning == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            planning.Date = planningDto.Date;
-            planning.Center = planningDto.Center;
-            planning.QuantiteALivrer = planningDto.QuantiteALivrer;
+        //    planning.Date = planningDto.Date;
+        //    planning.Center = planningDto.Center;
+        //    planning.QuantiteALivrer = planningDto.QuantiteALivrer;
 
-            _appDbContext.Entry(planning).State = EntityState.Modified;
-            await _appDbContext.SaveChangesAsync();
+        //    _appDbContext.Entry(planning).State = EntityState.Modified;
+        //    await _appDbContext.SaveChangesAsync();
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePlanning(Guid id)
