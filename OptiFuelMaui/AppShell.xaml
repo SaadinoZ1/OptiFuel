@@ -28,6 +28,5 @@
     Route="ValidationBL" />
         </Tab>
     </TabBar>
-    
-
+   
 </Shell>
