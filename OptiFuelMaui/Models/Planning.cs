@@ -10,7 +10,7 @@ namespace OptiFuelMaui.Models
     {
         public Guid Id { get; set; }
         public DateTime Date { get; set; }
-        public string? Center { get; set; }
+        public string? Centre { get; set; }
         public int QuantiteALivrer { get; set; }
 
 

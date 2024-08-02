@@ -3,6 +3,7 @@ using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,7 @@ namespace OptiFuelMaui.Services
         private readonly RestClient _client;
         public ApiService()
         {
-            _client = new RestClient("http://192.168.4.216:5232/api"); 
+            _client = new RestClient("http://192.168.4.216:5232/api");
         }
 
         private RestRequest CreateRequest(string resource, Method method, object body = null)
@@ -61,9 +62,21 @@ namespace OptiFuelMaui.Services
 
         public async Task<bool> AddPlanningAsync(Planning planning)
         {
+            try
+            { 
             var request = CreateRequest("planning", Method.Post, planning);
             var response = await _client.ExecuteAsync(request);
+            if (response.IsSuccessful)
+            {
+                Console.WriteLine($"Error: {response.Content}");
+            }
             return response.IsSuccessful;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Exception in AddPlanningAsync: {ex.Message}");
+            return false ;
+        }
         }
 
         public async Task<bool> EditPlanningAsync(Guid id, Planning planning)
@@ -81,5 +94,26 @@ namespace OptiFuelMaui.Services
         }
 
 
+        public async Task<List<Centre>> GetCentresAsync()
+        {
+            try
+            {
+                var request = CreateRequest("centre", Method.Get);
+                var response = await _client.ExecuteAsync<List<Centre>>(request);
+                if (response.IsSuccessful)
+                {
+                    return response.Data ?? new List<Centre>();
+                }
+                else
+                {
+                    Console.WriteLine($"Error fetching centres: {response.ErrorMessage}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception in GetCentresAsync: {ex.Message}");
+            }
+            return new List<Centre>();
+        }
     }
 }

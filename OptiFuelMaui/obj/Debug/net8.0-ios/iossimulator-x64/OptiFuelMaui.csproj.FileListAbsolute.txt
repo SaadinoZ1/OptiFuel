@@ -284,12 +284,14 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimula
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\calendar.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\camera.jpg
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\calendar.png
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\home3.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\mauiimage.stamp
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\mauiimage.outputs
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\mauifont.stamp
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Regular.ttf
@@ -317,3 +319,4 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimula
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\OptiFuelMaui.pdb
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\OptiFuelMaui.genruntimeconfig.cache
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\ref\OptiFuelMaui.dll
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\validation.png

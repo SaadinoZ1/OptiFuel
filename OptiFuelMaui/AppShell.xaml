@@ -7,12 +7,27 @@
     Shell.FlyoutBehavior="Disabled"
     Title="OptiFuel">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate views:PlanningPage}"
-        Route="MainPage" />
-    <ShellContent
+
+    <TabBar>
+        <Tab Title="Home" Icon="home3.png">
+            <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate views:PlanningPage}"
+    Route="MainPage" />
+        </Tab>
+        <Tab Title="Add Planning" Icon="calendar.png">
+            <ShellContent
     Title="Add Planning"
-    ContentTemplate="{DataTemplate views:AddPlanning}"/>
+    ContentTemplate="{DataTemplate views:AddPlanning}"
+    Route="AddPlanning" />
+        </Tab>
+        <Tab Title="Validation BL" Icon="validation.png">
+            <ShellContent
+    Title="Validation BL"
+    ContentTemplate="{DataTemplate views:ValidationBL}"
+    Route="ValidationBL" />
+        </Tab>
+    </TabBar>
+    
 
 </Shell>
