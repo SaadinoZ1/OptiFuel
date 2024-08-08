@@ -22,15 +22,27 @@ namespace OptiFuel.Data
         {
             base.OnModelCreating(modelBuilder);
             // Configuration des relations et des clés étrangères
+            modelBuilder.Entity<Planning>()
+                 .HasOne(p => p.ValidationBL)
+                 .WithOne(v => v.Planning)
+                 .HasForeignKey<ValidationBL>(v => v.PlanningId);
+
+
             modelBuilder.Entity<Commission>()
-                .HasOne(c => c.ValidationBL)
-                .WithMany(v => v.Commissions)
-                .HasForeignKey(c => c.ValidationBLId);
+                 .HasMany(c => c.Contact)
+                 .WithMany() // You can add a join table here if needed
+                 .UsingEntity<Dictionary<string, object>>(
+                     "CommissionContact",
+                     j => j.HasOne<Contact>().WithMany().HasForeignKey("ContactId"),
+                     j => j.HasOne<Commission>().WithMany().HasForeignKey("CommissionId")
+                 );
+
 
             modelBuilder.Entity<ValidationBL>()
-                .HasOne(v => v.Planning)
-                .WithOne(p => p.ValidationBL)
-                .HasForeignKey<ValidationBL>(v => v.PlanningId);
+                .HasOne(v => v.Commissions)
+                .WithOne(c => c.ValidationBL)
+                .HasForeignKey<Commission>(c => c.ValidationBLId);
+
 
             modelBuilder.Entity<Dechargement>()
                 .HasOne(d => d.ValidationBL)

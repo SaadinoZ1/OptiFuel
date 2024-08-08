@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using OptiFuel.Data;
 using OptiFuel.Dtos;
 using OptiFuel.Models;
+using System.Text.Json;
 
 namespace OptiFuel.Controllers
 {
@@ -53,6 +54,19 @@ namespace OptiFuel.Controllers
             if (validationBLDto == null)
                 return BadRequest("Invalid validation BL data.");
 
+            var commission = new Commission
+            {
+                Id = Guid.NewGuid(),
+                CodeG = validationBLDto.Commission.FirstOrDefault()?.CodeG,
+                CodeS = validationBLDto.Commission.FirstOrDefault()?.CodeS,
+                e_created_on = DateTime.UtcNow,
+                Contact = validationBLDto.Commission.Select(c => new Contact
+                {
+                    Id = c.ContactId,
+                    // You can populate other Contact properties here if needed
+                }).ToList()
+            };
+
             var validationBL = new ValidationBL
             {
                 Id = Guid.NewGuid(),
@@ -63,20 +77,14 @@ namespace OptiFuel.Controllers
                 StartTime = validationBLDto.StartTime,
                 EndTime = validationBLDto.EndTime,
                 e_created_on = DateTime.UtcNow,
-                Commissions = validationBLDto.Commissions.Select(c => new Commission
-                {
-                    Id = Guid.NewGuid(),
-                    ContactId = c.ContactId,
-                    CodeG = c.CodeG,
-                    CodeS = c.CodeS,
-                    e_created_on = DateTime.UtcNow
-                }).ToList()
+                Commissions = commission
             };
 
             _appDbContext.validationBLs.Add(validationBL);
             await _appDbContext.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetValidationBL), new { id = validationBL.Id }, validationBL);
+
         }
 
 
@@ -84,6 +92,7 @@ namespace OptiFuel.Controllers
         [HttpPost("UploadBL")]
         public async Task<IActionResult> UploadBL(Guid validationBLId, IFormFile blFile)
         {
+
             var validationBL = await _appDbContext.validationBLs.FindAsync(validationBLId);
             if (validationBL == null)
             {
@@ -100,6 +109,7 @@ namespace OptiFuel.Controllers
             await _appDbContext.SaveChangesAsync();
 
             return NoContent();
+
         }
 
         // POST: api/ValidationBL/UploadCertificat
@@ -122,12 +132,14 @@ namespace OptiFuel.Controllers
             await _appDbContext.SaveChangesAsync();
 
             return NoContent();
+
         }
 
         // PUT: api/ValidationBL/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutValidationBL(Guid id, ValidationBL validationBL)
         {
+
             if (id != validationBL.Id)
             {
                 return BadRequest();
@@ -152,6 +164,7 @@ namespace OptiFuel.Controllers
             }
 
             return NoContent();
+
         }
 
         // DELETE: api/ValidationBL/5
@@ -168,6 +181,7 @@ namespace OptiFuel.Controllers
             await _appDbContext.SaveChangesAsync();
 
             return NoContent();
+
         }
 
         // GET: api/ValidationBL/5/Commissions
@@ -184,7 +198,8 @@ namespace OptiFuel.Controllers
                 return NotFound();
             }
 
-            return validationBL.Commissions.ToList();
+            return Ok(validationBL.Commissions);
+
         }
 
         // POST: api/ValidationBL/5/Commissions

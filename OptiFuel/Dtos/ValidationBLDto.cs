@@ -10,6 +10,6 @@ namespace OptiFuel.Dtos
         public int QuantitésBL { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public ObservableCollection<CommissonDto> Commissions { get; set; }
+        public ObservableCollection<CommissonDto> Commission { get; set; }
     }
 }

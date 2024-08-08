@@ -14,8 +14,8 @@
         public DateTime? e_updated_on { get; set; }
 
         public Planning? Planning { get; set; }
+        public Commission? Commissions { get; set; }
         public ICollection<Dechargement>? Dechargements { get; set; }
-        public ICollection<Commission>? Commissions { get; set; }
         
     }
 }

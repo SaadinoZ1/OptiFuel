@@ -12,7 +12,7 @@
 
 
         public ValidationBL? ValidationBL { get; set; }
-        public Contact? Contact { get; set; }
+        public ICollection<Contact>? Contact { get; set; }
 
 
     }
