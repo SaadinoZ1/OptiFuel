@@ -1,6 +1,8 @@
 ﻿using MvvmHelpers;
+using MvvmHelpers.Commands;
 using OptiFuelMaui.Models;
 using OptiFuelMaui.Services;
+using OptiFuelMaui.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,7 +16,7 @@ using System.Windows.Input;
 namespace OptiFuelMaui.ViewModels
 {
 
-    public class AddPlanningViewModel:BaseViewModel
+    public class AddPlanningViewModel : BaseViewModel
     {
         private readonly ApiService _apiService;
         public ObservableCollection<string> CentreNames { get; set; }
@@ -25,7 +27,8 @@ namespace OptiFuelMaui.ViewModels
 
         private string _selectedCentreName;
         public string SelectedCentreName
-        { get => _selectedCentreName;
+        {
+            get => _selectedCentreName;
             set
             {
                 _selectedCentreName = value;
@@ -33,15 +36,16 @@ namespace OptiFuelMaui.ViewModels
                 NewPlanning.Centre = selectedCentre?.Name;
                 OnPropertyChanged();
             }
-}
+        }
 
+        public event Action<Planning> PlanningAdded;
         public AddPlanningViewModel()
         {
             _apiService = new ApiService();
             NewPlanning = new Planning();
             Centres = new ObservableCollection<Centre>();
             CentreNames = new ObservableCollection<string>();
-            AddPlanningCommand = new Command(AddPlanningAsync);
+            AddPlanningCommand = new Microsoft.Maui.Controls.Command(AddPlanningAsync);
             LoadCentres();
         }
 
@@ -72,22 +76,37 @@ namespace OptiFuelMaui.ViewModels
             try
             {
                 Console.WriteLine($"Centre: {NewPlanning.Centre}, Date: {NewPlanning.Date}, QuantiteALivrer: {NewPlanning.QuantiteALivrer}");
+                if (NewPlanning == null)
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "NewPlanning is null", "OK");
+                    return;
+                }
                 var result = await _apiService.AddPlanningAsync(NewPlanning);
-                if (result)
+                if (result != null)
                 {
                     // Handle successful addition, e.g., navigate back or show a message
                     await App.Current.MainPage.DisplayAlert("Success", "Planning added successfully", "OK");
-                    await App.Current.MainPage.Navigation.PopAsync();
+                    
+                    PlanningAdded?.Invoke(result);
+                    await Shell.Current.GoToAsync(nameof(PlanningPage));
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Failed to add planning", "OK");
                 }
             }
             catch (Exception ex)
             {
-                // Handle exceptions
                 Console.WriteLine($"Error adding planning: {ex.Message}");
+                await App.Current.MainPage.DisplayAlert("Error", $"Failed to add planning: {ex.Message}", "OK");
             }
         }
     }
 }
+            
+        
+    
+
            
 
 

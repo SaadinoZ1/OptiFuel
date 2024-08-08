@@ -1,3 +1,5 @@
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.iOS.dll
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.iOS.registrar.a
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\OptiFuelMaui.runtimeconfig.json
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\OptiFuelMaui.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\OptiFuelMaui.pdb
@@ -18,6 +20,8 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimula
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Maui.Graphics.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\MvvmHelpers.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\RestSharp.dll
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\Plugin.Media.dll
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\Xamarin.Essentials.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\zxing.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\ZXing.Net.MAUI.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\ar\Microsoft.Maui.Controls.resources.dll
@@ -221,7 +225,6 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimula
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\WindowsBase.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\mscorlib.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\netstandard.dll
-C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.iOS.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\System.Private.CoreLib.dll
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\icudt.dat
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\icudt_CJK.dat
@@ -255,7 +258,6 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimula
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\libmono-component-marshal-ilgen.dylib
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\libmonosgen-2.0.a
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\libmonosgen-2.0.dylib
-C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.iOS.registrar.a
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\libextension-dotnet.a
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet-debug.a
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet-debug.dylib
@@ -284,10 +286,15 @@ C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimula
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\home3.png
-C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\validation.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\calendar.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\camera.jpg
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\edit_icon.png
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\home3.png
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\edit.png
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\home_icone.png
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\modifier.png
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\modifier_icon.png
+C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\validation.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\hm.jpg
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
 C:\Users\Admin\source\repos\OptiFuel\OptiFuelMaui\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png

@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = OptiFuelMaui.Views.AddPlan
 build_metadata.AdditionalFiles.TargetPath = Views\AddPlanning.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AddPlanning.xaml
 
+[C:/Users/Admin/source/repos/OptiFuel/OptiFuelMaui/Views/EditPlanningPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = OptiFuelMaui.Views.EditPlanningPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EditPlanningPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EditPlanningPage.xaml
+
 [C:/Users/Admin/source/repos/OptiFuel/OptiFuelMaui/Views/PlanningPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = OptiFuelMaui.Views.PlanningPage.xaml

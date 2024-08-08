@@ -20,5 +20,7 @@ values\attrs;android\Resources\values\attrs
 values\colors;values\colors
 values\strings;values\strings
 values\styles;android\Resources\values\styles
+xml\file_paths;xml\file_paths
 xml\microsoft_maui_essentials_fileprovider_file_paths;resources\xml\microsoft_maui_essentials_fileprovider_file_paths
 xml\network_security_config;xml\network_security_config
+xml\xamarin_essentials_fileprovider_file_paths;xml\xamarin_essentials_fileprovider_file_paths

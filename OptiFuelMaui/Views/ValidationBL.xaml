@@ -34,15 +34,16 @@
                 <ImageButton  Source="camera.jpg"
                               Command="{Binding CaptureBLCommand}" BackgroundColor="MediumAquamarine" WidthRequest="60" HeightRequest="50"/>
                 <Label Text=" BL" VerticalOptions="Center" FontAttributes="Bold" />
-
-        </StackLayout>
-
-        <StackLayout  Orientation="Horizontal"  HorizontalOptions="StartAndExpand" Padding="15" Spacing="10">
+            </StackLayout>
+            <Image Source="{Binding blImage}" WidthRequest="100" HeightRequest="100"/>
+            <StackLayout  Orientation="Horizontal"  HorizontalOptions="StartAndExpand" Padding="15" Spacing="10">
           <!-- Capture Certificat Button -->
                 <ImageButton  Source="camera.jpg"
                 Command="{Binding CaptureCertificatCommand}" BackgroundColor="MediumAquamarine" WidthRequest="60" HeightRequest="50"/>
                 <Label Text="Certificat" VerticalOptions="Center" FontAttributes="Bold" />
-        </StackLayout>
+            </StackLayout>
+            <Image Source="{Binding certificatImage}" WidthRequest="100" HeightRequest="100"/>
+            <Entry Placeholder="Code G" Text="{Binding CommissionMembers[0].CodeG}"/>
             <Frame BackgroundColor="MediumAquamarine" Padding="10" HeightRequest="50" WidthRequest="200">
             <!-- Confirmer Button -->
             <Button Text="Confirmer"

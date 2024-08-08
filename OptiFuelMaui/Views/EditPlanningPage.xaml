@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OptiFuelMaui.Views.EditPlanningPage"
+             xmlns:vm="clr-namespace:OptiFuelMaui.ViewModels"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             Title="">
+    <ContentPage.BindingContext>
+        <vm:EditPlanningViewModel/>
+    </ContentPage.BindingContext>
+    <Frame BackgroundColor="White" Padding="20" CornerRadius="20" HeightRequest="450" WidthRequest="400" Margin="0,-50,0,0">
+
+        <StackLayout Padding="20" Spacing="10">
+            <Label Text="Date" FontAttributes="Bold" />
+            <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
+
+                <DatePicker Date="{Binding SelectedPlanning.Date}" Format="dd/MM/yyyy" TextColor="Blue" BackgroundColor="LightGray" MinimumDate="{x:Static sys:DateTime.Now}" />
+            </Frame>
+            <Label Text="Centre" FontAttributes="Bold" />
+            <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
+
+                <Entry Text="{Binding SelectedPlanning.Centre}" />
+            </Frame>
+            <Label Text="Quantité à Livrer" FontAttributes="Bold" />
+            <Frame BackgroundColor="White" Padding="10" CornerRadius="10">
+
+                <Entry Text="{Binding SelectedPlanning.QuantiteALivrer}" Keyboard="Numeric" />
+            </Frame>
+
+            <Button Text="Save" Command="{Binding SaveCommand}"  CornerRadius="20"  HeightRequest="50" WidthRequest="200" BackgroundColor="MediumAquamarine"/>
+        </StackLayout>
+    </Frame>
+</ContentPage>

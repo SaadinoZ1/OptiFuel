@@ -7,8 +7,9 @@ namespace OptiFuelMaui.Views
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(PlanningPage), typeof(PlanningPage));
-            Routing.RegisterRoute(nameof(ValidationBL), typeof(ValidationBL));
             Routing.RegisterRoute(nameof(AddPlanning), typeof(AddPlanning));
+            Routing.RegisterRoute(nameof(ValidationBL), typeof(ValidationBL));
+            Routing.RegisterRoute(nameof(EditPlanningPage), typeof(EditPlanningPage));
 
 
 

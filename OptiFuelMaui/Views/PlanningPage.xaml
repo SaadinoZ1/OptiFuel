@@ -7,31 +7,50 @@
     <ContentPage.BindingContext>
         <vm:PlanningViewModel />
     </ContentPage.BindingContext>
+    <ScrollView>
     <StackLayout>
         <Label Text="Planning"
                FontSize="Large"
                HorizontalOptions="Center"
                Margin="20" FontAttributes="Bold" />
 
-        <CollectionView x:Name="planingCollectionView"
-                        ItemsSource="{Binding Plannings}">
+        <CollectionView 
+                        ItemsSource="{Binding Plannings}" SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10" ColumnDefinitions="*,*,*">
-                        <Label Text="{Binding Date, StringFormat='{} {0:MM/dd/yyyy}'}"
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems Mode="Reveal">
+                                <SwipeItem
+                                    Text="Edit"
+                                    BackgroundColor="White"
+                                    IconImageSource="modifier.png" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PlanningViewModel}}, Path=NavigateToEditPlanningCommand}"
+                                    CommandParameter="{Binding .}" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Date, StringFormat='{} {0:MM/dd/yyyy}'}"
                                Grid.Column="0" 
                                HorizontalTextAlignment="Center">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PlanningViewModel}}, Path=SelectPlanningCommand}" CommandParameter="{Binding .}"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                        <Label Text="{Binding Centre}"
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PlanningViewModel}}, Path=SelectPlanningCommand}" CommandParameter="{Binding .}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Text="{Binding Centre}"
                                Grid.Column="1" 
                                HorizontalTextAlignment="Center"/>
-                        <Label Text="{Binding QuantiteALivrer}"
+                            <Label Text="{Binding QuantiteALivrer}"
                                Grid.Column="2" 
                                HorizontalTextAlignment="Center"/>
-                    </Grid>
+                        </Grid>
+                    </SwipeView>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             <CollectionView.Header>
@@ -53,4 +72,5 @@
             </CollectionView.Header>
         </CollectionView>
     </StackLayout>
+    </ScrollView>
 </ContentPage>

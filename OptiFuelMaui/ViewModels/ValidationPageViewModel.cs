@@ -1,8 +1,12 @@
 ﻿using MvvmHelpers;
+using OptiFuelMaui.Dtos;
 using OptiFuelMaui.Models;
 using OptiFuelMaui.Services;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -17,6 +21,23 @@ namespace OptiFuelMaui.ViewModels
         private readonly ApiService _apiService;
         private Guid _planningId;
         private Planning _selectedPlanning;
+        private byte[] _blFile;
+        private byte[] _certificatJumelageFile;
+        public ObservableCollection<CommissionDto> CommissionMembers { get; set; }
+        private ImageSource BlImage;
+        private ImageSource CertificatImage;
+
+        public ImageSource blImage
+        {
+            get => BlImage;
+            set => SetProperty(ref BlImage, value);
+        }
+
+        public ImageSource certificatImage
+        {
+            get => CertificatImage;
+            set => SetProperty(ref CertificatImage, value);
+        }
 
 
         public string PlanningId
@@ -54,6 +75,14 @@ namespace OptiFuelMaui.ViewModels
             CaptureBLCommand = new Command(async () => await CaptureBLAsync());
             CaptureCertificatCommand = new Command(async () => await CaptureCertificatAsync());
             ConfirmCommand = new Command(async () => await ConfirmAsync());
+            CommissionMembers = new ObservableCollection<CommissionDto>
+            {
+                new CommissionDto
+                {
+                    ContactId = Guid.NewGuid(), CodeG = "", CodeS = ""
+                },
+            };
+
         }
 
 
@@ -61,7 +90,8 @@ namespace OptiFuelMaui.ViewModels
         {
             try
             {
-                SelectedPlanning = await _apiService.GetPlanningAsync(_planningId);
+                SelectedPlanning = await _apiService.GetPlanningAsync(_planningId).ConfigureAwait(false);
+                OnPropertyChanged(nameof(SelectedPlanning));
             }
             catch (Exception ex)
             {
@@ -71,22 +101,77 @@ namespace OptiFuelMaui.ViewModels
 
         private async Task CaptureBLAsync()
         {
-            // Logic to capture BL
+             var status = await Permissions.RequestAsync<Permissions.Camera>();
+            if (status == PermissionStatus.Granted)
+            {
+                var photo = await MediaPicker.CapturePhotoAsync();
+                if (photo != null)
+                {
+                    using var stream = await photo.OpenReadAsync();
+                    using var memoryStream = new MemoryStream();
+                    {
+                        await stream.CopyToAsync(memoryStream);
+                        _blFile = memoryStream.ToArray();
+                        BlImage = ImageSource.FromStream(() => new MemoryStream(_blFile));
+                    }
+                }
+
+            }
+
         }
 
         private async Task CaptureCertificatAsync()
         {
-            // Logic to capture Certificat
+            var status = await Permissions.RequestAsync<Permissions.Camera>();
+            if (status == PermissionStatus.Granted)
+            {
+
+                var photo = await MediaPicker.CapturePhotoAsync();
+                if (photo != null)
+                {
+                    using var stream = await photo.OpenReadAsync();
+                    using var memoryStream = new MemoryStream();
+                    {
+                        await stream.CopyToAsync(memoryStream);
+                        _certificatJumelageFile = memoryStream.ToArray();
+                        CertificatImage = ImageSource.FromStream(() => new MemoryStream(_certificatJumelageFile));
+                    }
+                }
+            }
+
         }
 
         private async Task ConfirmAsync()
         {
-            // Logic to confirm
-        }
+            var validationBLDto = new ValidationBLDto
+            {
+                PlanningId = _planningId,
+                BLFile = _blFile,
+                CertificatJumelageFile = _certificatJumelageFile,
+                QuantitésBL = SelectedPlanning.QuantiteALivrer,
+                StartTime = DateTime.Now,
+                EndTime = DateTime.Now.AddHours(1),
+                Commissions = CommissionMembers
+            };
+
+            var success = await _apiService.AddValidationBLAsync(validationBLDto).ConfigureAwait(false);
+
+            if (success)
+            {
+                Console.WriteLine("Validation BL added successfully");
+            }
+            else
+            {
+                Console.WriteLine("Failed to add Validation BL");
+            }
 
 
+        }
 
     }
 
-
 }
+
+
+
+   

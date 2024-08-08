@@ -7,9 +7,9 @@
     Shell.FlyoutBehavior="Disabled"
     Title="OptiFuel">
 
-
+   
     <TabBar>
-        <Tab Title="Home" Icon="hm.jpg">
+        <Tab Title="Home" Icon="home_icone.png">
             <ShellContent
     Title="Home"
     ContentTemplate="{DataTemplate views:PlanningPage}"
@@ -28,5 +28,7 @@
     Route="ValidationBL" />
         </Tab>
     </TabBar>
-   
+    <ShellContent
+Title="Edit Planning"
+ContentTemplate="{DataTemplate views:EditPlanningPage}"/>
 </Shell>
