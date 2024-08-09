@@ -85,8 +85,7 @@ namespace OptiFuelMaui.ViewModels
                 if (result != null)
                 {
                     // Handle successful addition, e.g., navigate back or show a message
-                    await App.Current.MainPage.DisplayAlert("Success", "Planning added successfully", "OK");
-                    
+                    await App.Current.MainPage.DisplayAlert("Success", "Planning added successfully", "OK");                    
                     PlanningAdded?.Invoke(result);
                     await Shell.Current.GoToAsync(nameof(PlanningPage));
                 }

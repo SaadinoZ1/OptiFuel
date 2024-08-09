@@ -64,6 +64,7 @@
 	  <None Remove="Resources\Images\edit.png" />
 	  <None Remove="Resources\Images\edit_icon.png" />
 	  <None Remove="Resources\Images\hm.jpg" />
+	  <None Remove="Resources\Images\hm_icon.png" />
 	  <None Remove="Resources\Images\home3.png" />
 	  <None Remove="Resources\Images\home_icone.png" />
 	  <None Remove="Resources\Images\modifier.png" />

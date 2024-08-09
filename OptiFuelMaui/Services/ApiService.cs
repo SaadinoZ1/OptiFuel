@@ -16,7 +16,7 @@ namespace OptiFuelMaui.Services
         private readonly RestClient _client;
         public ApiService()
         {     
-            _client = new RestClient("http://192.168.1.2:5232/api");
+            _client = new RestClient("http://192.168.4.203:5232/api");
         }
 
         private RestRequest CreateRequest(string resource, Method method, object body = null)
@@ -102,7 +102,7 @@ namespace OptiFuelMaui.Services
                 Console.WriteLine($"EditPlanningAsyncResponse: {response.Content} ");
                 if (response.IsSuccessful)
                 {
-                    Console.WriteLine("EditPlanningAsync: Planning updated successfully.");
+                    Console.WriteLine("EditPlanningAsync: Planning updated successfully.", response);
                     return response.Data;
                 }
                 else

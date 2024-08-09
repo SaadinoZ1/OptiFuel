@@ -13,15 +13,15 @@
             FontSize="Large"
             HorizontalOptions="Center"
             Margin="20"  FontAttributes="Bold"/>
-
-                <Frame  CornerRadius="20"   HorizontalOptions="StartAndExpand">
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand" Padding="15" Spacing="10"  WidthRequest="200" HeightRequest="96">
+                <Frame  CornerRadius="100"   HorizontalOptions="StartAndExpand">
             <!-- Date -->
             <Label Text="{Binding SelectedPlanning.Date, StringFormat=' {0:MM/dd/yyyy}'}"
                FontSize="Large"
                HorizontalOptions="CenterAndExpand" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
         </Frame>
-        
-            <Frame  CornerRadius="20"   HorizontalOptions="CenterAndExpand">
+            </StackLayout>
+            <Frame  CornerRadius="100"   HorizontalOptions="CenterAndExpand" HeightRequest="70" WidthRequest="200">
 
             <!-- Quantité prévue à livrer -->
             <Label Text="{Binding SelectedPlanning.QuantiteALivrer, StringFormat='Qte prévue: {0}'}"

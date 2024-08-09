@@ -63,7 +63,6 @@ namespace OptiFuelMaui.ViewModels
                     await App.Current.MainPage.DisplayAlert("Success", "Planning updated successfully", "OK");
 
                     PlanningUpdated?.Invoke(updatedPlanning);
-
                         await Shell.Current.GoToAsync(nameof(PlanningPage));
                 }
                 else
